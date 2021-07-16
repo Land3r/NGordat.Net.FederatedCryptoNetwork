@@ -2,14 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <AssemblyVersion>1.0.0.197</AssemblyVersion>
+    <FileVersion>1.0.0.197</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Controllers\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\scripts\offcanvas.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\styles\offcanvas.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
