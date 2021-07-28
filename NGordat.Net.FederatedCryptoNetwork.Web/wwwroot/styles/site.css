@@ -17,3 +17,29 @@
     top: 0;
     left: 0
 }
+
+.star-checked {
+    color:yellow;
+}
+
+.star-unchecked {
+    color:lightyellow;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar-brand .off{
+    color: lightgray;
+    font-weight: 300;
+    font-stretch:semi-condensed;
+    font-size: 1.5rem;
+}
+
+.navbar-brand .on {
+    color: hotpink !important;
+    font-weight: 900;
+    font-style: oblique;
+    font-size: 1.75rem;
+}

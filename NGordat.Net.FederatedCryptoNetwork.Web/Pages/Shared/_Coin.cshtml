@@ -1,0 +1,13 @@
+﻿@model string
+
+<div class="p-1 coin-icon">
+    <img src="~/images/coins/@(Model).png" height="48" width="48" />
+    <span class="text-uppercase font-weight-bold">@Model</span>
+</div>
+
+<style scoped>
+    .coin-icon {
+        flex: 1 1 0px;
+        min-width: 6.75rem;
+    }
+</style>
