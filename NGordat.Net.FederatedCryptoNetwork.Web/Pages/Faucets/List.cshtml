@@ -1,8 +1,8 @@
 ﻿@page
-@model NGordat.Net.FederatedCryptoNetwork.Web.Pages.Faucets.FaucetCryptoModel
+@model NGordat.Net.FederatedCryptoNetwork.Web.Pages.Faucets.ListModel
 @{
-  ViewBag.PageTitle = "FaucetCrypto";
-  ViewBag.AvailableCoins = new List<string>()
+    ViewBag.PageTitle = "FaucetCrypto";
+    ViewBag.AvailableCoins = new List<string>()
 {
       "btc",
       "eth",
@@ -62,7 +62,7 @@
                     src="https://www.youtube.com/embed/M7lc1UVf-VE"
                     frameborder="0"></iframe>
         </div>
-    </div> 
+    </div>
 
 
     <h6 class="border-bottom border-gray pb-2 mb-0">Fonctionnalitées</h6>
@@ -111,32 +111,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="d-flex flex-row flex-wrap align-content-start">
-                            <div class="form-group">
-                                <label for="minimum_withdraw">Methods :</label>
-                                <ul>
-                                    <li>Direct to wallet</li>
-                                    <li>FaucetPay</li>
-                                    <li>ExpressCrypto</li>
-                                    <li>Payeer</li>
-                                </ul>
-                                <div class="input-group">
-                                    <input name="minimum_withdraw" type="number" value="0.05" class="form-control" readonly />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">&#x20AC;</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="minimum_withdraw">Max withdraw :</label>
-                                <div class="input-group">
-                                    <input name="maximum_withdraw" type="text" value="1 / jour" class="form-control" readonly />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">&#x1F551;</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -147,24 +121,24 @@
     </small>
 </div>
 
-    <div class="d-flex justify-content-center">
-        <a target="_blank" href="https://faucetcrypto.com/ref/1310289"><img src="https://faucetcrypto.com/banners/728x90.gif" width="728" height="90"></a>
+<div class="d-flex justify-content-center">
+    <a target="_blank" href="https://faucetcrypto.com/ref/1310289"><img src="https://faucetcrypto.com/banners/728x90.gif" width="728" height="90"></a>
+</div>
+
+<div class="my-3 p-3 bg-white rounded box-shadow">
+
+</div>
+
+<div class="my-3 p-3 bg-white rounded box-shadow">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Reviews</h6>
+    <div class="row mt-2">
+        Module de review ?
     </div>
+</div>
 
-    <div class="my-3 p-3 bg-white rounded box-shadow">
-
-    </div>
-
-    <div class="my-3 p-3 bg-white rounded box-shadow">
-        <h6 class="border-bottom border-gray pb-2 mb-0">Reviews</h6>
-        <div class="row mt-2">
-            Module de review ?
-        </div>
-    </div>
-
-    <style scoped>
-        .crypto-list {
-            margin-top: 1rem;
-            margin-bottom: 1.5rem;
-        }
-    </style>
+<style scoped>
+    .crypto-list {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+</style>
