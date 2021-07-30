@@ -2,143 +2,20 @@
 @model NGordat.Net.FederatedCryptoNetwork.Web.Pages.Faucets.ListModel
 @{
     ViewBag.PageTitle = "FaucetCrypto";
-    ViewBag.AvailableCoins = new List<string>()
-{
-      "btc",
-      "eth",
-      "bch",
-      "bsv",
-      "etc",
-      "ltc",
-      "dash",
-      "zec",
-      "doge",
-      "dgb",
-      "rvn",
-      "trx",
-      "btt",
-      "kmd",
-      "sys",
-      "xvg",
-      "zen",
-      "rdd",
-      "pivx",
-      "pirate"
-  };
+
+  var model = new NGordat.Net.FederatedCryptoNetwork.Web.ViewModels.Faucets.FaucetViewModel();
+  model.Name = "FaucetCrypto";
+  model.PublicUrl = "https://faucetcrypto.com";
+  model.AffiliateUrl = "https://faucetcrypto.com/ref/1310289";
+  model.Ranking = 1;
+  model.DescriptionShort = "Most complex website. Earn from PTC ads, manual faucet , auto faucet, contests , lottery and much more";
+  model.Banner = "https://faucetcrypto.com/banners/728x90.gif";
 }
 
-<div class="d-flex align-items-center p-3 text-white-50 bg-purple rounded box-shadow" style="margin-top: 74px;">
-    <img class="mr-3" src="~/images/faucets/faucetcrypto.jpg" alt="FaucetCrypto" width="64" height="64" />
-    <div class="lh-100 mr-auto">
-        <h6 class="mb-0 text-white lh-100"><i class="fas fa-faucet"></i> Faucet > FaucetCrypto</h6>
-        <div>
-            <span class="fa fa-star star-checked"></span>
-            <span class="fa fa-star star-checked"></span>
-            <span class="fa fa-star star-checked"></span>
-            <span class="fa fa-star star-unchecked"></span>
-            <span class="fa fa-star star-unchecked"></span>
-        </div>
-        <small>Since 2017</small>
-    </div>
-    <div class="badge-pill badge-success">10 min / j</div>
-</div>
+<partial name="_FaucetBox" model="model" />
+<partial name="_FaucetBox" model="model" />
+<partial name="_FaucetBox" model="model" />
+<partial name="_FaucetBox" model="model" />
+<partial name="_FaucetBox" model="model" />
 
-<div class="my-3 p-3 bg-white rounded box-shadow flex-column">
-    <h6 class="border-bottom border-gray pb-2 mb-0">FaucetCrypto</h6>
-    <p class="mb-1">Qu'est ce qu'un faucet ?</p>
-    <div class="text-muted pt-3">
-        <p>Un faucet ("robinet", en français) est un site Internet ou une application mobile qui récompense ses visiteurs ou ses utilisateurs en les "rémunérant", c'est-à-dire en leur versant des tokens ou des satochis (la plus petite unité utilisée dans le protocole bitcoin), en contrepartie du temps passé et des actions réalisées. L'internaute qui souhaite ainsi gagner de petites fractions de bitcoins et d'altcoins (car il existe des faucets tout autant pour le bitcoin que pour des cryptomonnaies alternatives) devra au préalable effectuer des micro tâches, consistant par exemple à remplir un captcha, fournir une adresse e-mail, répondre à un quizz, regarder des publicités en ligne, participer à un sondage ou bien encore éliminer des créatures ou des personnages dans un jeu en ligne.</p>
-    </div>
-    <p class="mb-1">Pourquoi FaucetCrypto ?</p>
-    <div class="d-flex flex-row">
-        <div class="text-muted pt-3">
-            <p><a href="TODO">FaucetCrypto</a> est un faucet complet qui permet de gagner assez rapidement jusqu'à 1€/jour.</p>
-        </div>
-        <div>
-            <iframe id="ytplayer"
-                    type="text/html"
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/M7lc1UVf-VE"
-                    frameborder="0"></iframe>
-        </div>
-    </div>
-
-
-    <h6 class="border-bottom border-gray pb-2 mb-0">Fonctionnalitées</h6>
-    <div class="row mt-2">
-        <div class="col-4">
-            <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home"><i class="fas fa-tv"></i> PTC Ads <span class="badge badge-pill badge-secondary">10+ / j</span></a>
-                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile"><i class="fas fa-stopwatch"></i> Timer <span class="badge badge-pill badge-secondary">25 min</span></a>
-                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages"><i class="fas fa-link"></i> Links <span class="badge badge-pill badge-secondary">14 / j</span></a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fab fa-wpforms"></i> Surveys <span class="badge badge-pill badge-secondary">~10 / j</span></a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fas fa-tasks"></i> Offers <span class="badge badge-pill badge-secondary">&#8734;</span></a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings"><i class="fab fa-btc"></i> Retraits <span class="badge badge-pill badge-success">@ViewBag.AvailableCoins.Count</span></a>
-            </div>
-        </div>
-        <div class="col-8">
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Regardez des Publicités, passionnant, mais surtout rentable !</div>
-                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
-                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                    <div class="rounded border-gray">
-                        <span class="">Cryptos disponibles :</span>
-                        <div class="d-flex flex-row flex-wrap align-content-start crypto-list">
-                            @foreach (string coin in ViewBag.AvailableCoins)
-                            {
-                                <partial name="_Coin" model="coin" />
-                            }
-                        </div>
-                        <div class="d-flex flex-row flex-wrap align-content-start justify-content-between">
-                            <div class="form-group">
-                                <label for="minimum_withdraw">Minimum withdraw :</label>
-                                <div class="input-group">
-                                    <input name="minimum_withdraw" type="number" value="0.05" class="form-control" readonly />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">&#x20AC;</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="minimum_withdraw">Max withdraw :</label>
-                                <div class="input-group">
-                                    <input name="maximum_withdraw" type="text" value="1 / jour" class="form-control" readonly />
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">&#x1F551;</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <small class="d-block text-right mt-3">
-        <a href="#"><i class="fas fa-faucet"></i> All faucets</a>
-    </small>
-</div>
-
-<div class="d-flex justify-content-center">
-    <a target="_blank" href="https://faucetcrypto.com/ref/1310289"><img src="https://faucetcrypto.com/banners/728x90.gif" width="728" height="90"></a>
-</div>
-
-<div class="my-3 p-3 bg-white rounded box-shadow">
-
-</div>
-
-<div class="my-3 p-3 bg-white rounded box-shadow">
-    <h6 class="border-bottom border-gray pb-2 mb-0">Reviews</h6>
-    <div class="row mt-2">
-        Module de review ?
-    </div>
-</div>
-
-<style scoped>
-    .crypto-list {
-        margin-top: 1rem;
-        margin-bottom: 1.5rem;
-    }
 </style>

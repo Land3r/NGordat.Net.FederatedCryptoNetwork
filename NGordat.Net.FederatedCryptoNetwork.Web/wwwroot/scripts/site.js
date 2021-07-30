@@ -16,7 +16,7 @@
                 "type": "circle",
                 "stroke": {
                     "width": 1,
-                    "color": "#FFFFFF"
+                    "color": "#FF652F"
                 },
                 "polygon": {
                     "nb_sides": 5
@@ -50,7 +50,7 @@
             "line_linked": {
                 "enable": true,
                 "distance": 150,
-                "color": "#FF0000",
+                "color": "#FF652F",
                 "opacity": 0.4,
                 "width": 1
             },
@@ -111,4 +111,5 @@
         "retina_detect": true
     });
 
+//    jQuery('[data-tooltip=]').tooltip();
 });

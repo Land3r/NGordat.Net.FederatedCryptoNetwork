@@ -1,0 +1,28 @@
+﻿@model NGordat.Net.FederatedCryptoNetwork.Web.ViewModels.Faucets.FaucetViewModel
+@{
+}
+
+<div class="my-3 p-2 bg-white rounded box-shadow flex-column">
+    <h6 class="border-bottom border-gray pb-2 mb-1">
+        <span class="badge badge-warning mr-1 p-1" style="font-size:larger">#@Model.Ranking</span>@Model.Name - <a href="@Model.AffiliateUrl" target="_blank">@Model.PublicUrl</a>
+        <span class="badge badge-success p-1" data-toggle="tooltip" data-placement="top" title="Last reported 2 days ago.">Status*: <strong>Legit</strong></span>
+    </h6>
+    <div class="d-flex flex-row justify-content-between">
+        <div>
+            <ul>
+                <li>PTC Ads</li>
+                <li>Shortlinks</li>
+                <li>Timer</li>
+                <li>dsqdqs</li>
+                <li>dsqdqs</li>
+                <li>Withdraw direct to wallet</li>
+            </ul>
+        </div>
+        <div class="lh-100">
+            <a target="_blank" href="@Model.AffiliateUrl"><img src="@Model.Banner" width="728" height="90" /></a>
+            <div class="text-muted pt-3">
+                @Model.DescriptionShort
+            </div>
+        </div>
+    </div>
+</div>
