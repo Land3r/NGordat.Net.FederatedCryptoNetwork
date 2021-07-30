@@ -92,9 +92,9 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
-#hero h1 span {
+#hero h1 span, #hero h2 span {
     color: #fff;
-    border-bottom: 4px solid #1acc8d;
+    border-bottom: 4px solid #FF652F;
 }
 
 #hero h2 {
@@ -103,18 +103,18 @@ body {
     font-size: 24px;
 }
 
-#hero .btn-get-started {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 30px;
-    border-radius: 50px;
-    transition: 0.5s;
-    color: #fff;
-    background: #1acc8d;
-}
+    #hero .btn-get-started {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 1px;
+        display: inline-block;
+        padding: 10px 30px;
+        border-radius: 50px;
+        transition: 0.5s;
+        color: #fff;
+        background: #FF652F;
+    }
 
 #hero .btn-get-started:hover {
     background: #17b57d;

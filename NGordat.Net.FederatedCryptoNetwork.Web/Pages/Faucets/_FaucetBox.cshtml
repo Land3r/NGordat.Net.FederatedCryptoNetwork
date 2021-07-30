@@ -1,22 +1,54 @@
 ﻿@model NGordat.Net.FederatedCryptoNetwork.Web.ViewModels.Faucets.FaucetViewModel
 @{
+    string recommendedClass = Model.Recommended.HasValue && Model.Recommended == true ? "border border-warning" : "";
 }
 
-<div class="my-3 p-2 bg-white rounded box-shadow flex-column">
-    <h6 class="border-bottom border-gray pb-2 mb-1">
-        <span class="badge badge-warning mr-1 p-1" style="font-size:larger">#@Model.Ranking</span>@Model.Name - <a href="@Model.AffiliateUrl" target="_blank">@Model.PublicUrl</a>
-        <span class="badge badge-success p-1" data-toggle="tooltip" data-placement="top" title="Last reported 2 days ago.">Status*: <strong>Legit</strong></span>
-    </h6>
+<div class="my-3 p-2 bg-white rounded box-shadow flex-column @recommendedClass">
     <div class="d-flex flex-row justify-content-between">
         <div>
+            <h6 class="border-bottom border-gray pb-2 mb-1">
+                <span class="badge badge-warning mr-1 p-1" style="font-size:larger">#@Model.Ranking</span>
+                <span style="font-size:1.25rem;">@Model.Name</span> - <a href="@Model.AffiliateUrl" target="_blank">@Model.PublicUrl</a>
+                <span class="badge badge-success p-1" data-toggle="tooltip" data-placement="top" title="Last reported 2 days ago.">Status*: <strong>Legit</strong></span>
+            </h6>
+        </div>
+        <div>
+            <a href="out"><i class="fas fa-info-circle"></i> Info</a>
+        </div>
+    </div>
+
+    <div class="d-flex flex-row justify-content-between">
+        <div style="text-align:center">
+            <img src="@Model.Icon" height="64" />
+            <div>
+                <span class="fa fa-star star-checked"></span>
+                <span class="fa fa-star star-checked"></span>
+                <span class="fa fa-star star-checked"></span>
+                <span class="fa fa-star star-unchecked"></span>
+                <span class="fa fa-star star-unchecked"></span>
+            </div>
+            <small>Since 2017</small>
+            <div>
+                <a href="out"><i class="fas fa-info-circle"></i> Info</a>
+            </div>
+        </div>
+        <div>
             <ul>
-                <li>PTC Ads</li>
-                <li>Shortlinks</li>
                 <li>Timer</li>
-                <li>dsqdqs</li>
-                <li>dsqdqs</li>
+                <li>PTC Ads / Shortlinks</li>
+                <li>Challenges</li>
                 <li>Withdraw direct to wallet</li>
-            </ul>
+                <li>
+                    @if (Model.Ranking != null && Model.Ranking <= 3)
+                    {
+                        <span class="badge badge-warning mr-1 p-1">#@Model.Ranking</span>
+                    }
+                    @if (Model.Recommended.HasValue && Model.Recommended == true)
+                    {
+                        <span class="badge badge-success mr-1 p-1">RECOMMENDED</span>
+                    }
+                </li>
+                </ul>
         </div>
         <div class="lh-100">
             <a target="_blank" href="@Model.AffiliateUrl"><img src="@Model.Banner" width="728" height="90" /></a>

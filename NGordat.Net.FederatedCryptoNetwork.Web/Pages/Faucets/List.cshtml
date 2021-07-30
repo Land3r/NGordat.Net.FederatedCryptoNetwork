@@ -3,13 +3,35 @@
 @{
     ViewBag.PageTitle = "FaucetCrypto";
 
-  var model = new NGordat.Net.FederatedCryptoNetwork.Web.ViewModels.Faucets.FaucetViewModel();
-  model.Name = "FaucetCrypto";
-  model.PublicUrl = "https://faucetcrypto.com";
-  model.AffiliateUrl = "https://faucetcrypto.com/ref/1310289";
-  model.Ranking = 1;
-  model.DescriptionShort = "Most complex website. Earn from PTC ads, manual faucet , auto faucet, contests , lottery and much more";
-  model.Banner = "https://faucetcrypto.com/banners/728x90.gif";
+    var model = new NGordat.Net.FederatedCryptoNetwork.Web.ViewModels.Faucets.FaucetViewModel();
+    model.Name = "FaucetCrypto";
+    model.PublicUrl = "https://faucetcrypto.com";
+    model.AffiliateUrl = "https://faucetcrypto.com/ref/1310289";
+    model.Ranking = 1;
+    model.DescriptionShort = "Most complex website. Earn from PTC ads, manual faucet , auto faucet, contests , lottery and much more";
+    model.Banner = "/images/faucets/faucetcrypto_728x90_inf.gif";
+    model.Icon = "https://faucetcrypto.com/img/logo/favicon.png";
+    model.Recommended = true;
+}
+
+
+@section Hero {
+    <div class="container bg-theme-light p-4 rounded border border-warning">
+        <div class="row justify-content-between">
+            <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+                <div data-aos="zoom-out">
+                    <h1>Earn money with our selection of currated <span>Faucets</span></h1>
+                    <h2>Just fill in super easy tasks and get paid for it. You just need to have some free time to earn <span>crypto</span></h2>
+                    <div class="text-center text-lg-start">
+                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
+                <img src="~/images/faucets/faucet.png" class="img-fluid animated" alt="">
+            </div>
+        </div>
+    </div>
 }
 
 <partial name="_FaucetBox" model="model" />
@@ -17,5 +39,3 @@
 <partial name="_FaucetBox" model="model" />
 <partial name="_FaucetBox" model="model" />
 <partial name="_FaucetBox" model="model" />
-
-</style>
