@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
+using NGordat.Net.FederatedCryptoNetwork.Dal;
+using NGordat.Net.FederatedCryptoNetwork.Services;
 using NGordat.Net.FederatedCryptoNetwork.Web.Configurations;
 
 namespace NGordat.Net.FederatedCryptoNetwork.Web
@@ -49,6 +51,9 @@ namespace NGordat.Net.FederatedCryptoNetwork.Web
       {
         razor.AddRazorRuntimeCompilation();
       }
+
+      DalConfigurationExtensions.Configure(services);
+      ServicesConfigurationExtensions.Configure(services);
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

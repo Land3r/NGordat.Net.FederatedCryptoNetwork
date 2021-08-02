@@ -1,0 +1,15 @@
+﻿@page
+@model NGordat.Net.FederatedCryptoNetwork.Web.Pages.Admin.IndexModel
+@{
+}
+
+<div class="bg-theme-light">
+    <form method="post">
+        @if (!string.IsNullOrEmpty(Model.SuccessMessage))
+        {
+            <p class="alert alert-success">@Model.SuccessMessage</p>
+        }
+        <h5>Database</h5>
+        <button type="submit" name="EnsureCreated" class="btn btn-warning" asp-page-handler="EnsureCreated">EnsureCreated</button>
+    </form>
+</div>

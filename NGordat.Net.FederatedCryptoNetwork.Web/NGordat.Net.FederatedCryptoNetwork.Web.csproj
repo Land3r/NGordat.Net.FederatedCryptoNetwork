@@ -28,4 +28,8 @@
     <Folder Include="wwwroot\images\icons\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NGordat.Net.FederatedCryptoNetwork.Services\NGordat.Net.FederatedCryptoNetwork.Services.csproj" />
+  </ItemGroup>
+
 </Project>

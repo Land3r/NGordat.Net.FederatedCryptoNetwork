@@ -22,6 +22,7 @@ namespace NGordat.Net.FederatedCryptoNetwork.Web.ViewModels.Faucets
     public string DescriptionLong { get; set; }
 
     public string Banner { get; set; }
+
     public string Icon { get; set; }
     }
 }

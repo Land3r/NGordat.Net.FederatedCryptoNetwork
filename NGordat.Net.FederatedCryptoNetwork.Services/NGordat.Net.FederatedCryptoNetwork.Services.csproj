@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NGordat.Net.FederatedCryptoNetwork.Dal\NGordat.Net.FederatedCryptoNetwork.Dal.csproj" />
+  </ItemGroup>
+
+</Project>

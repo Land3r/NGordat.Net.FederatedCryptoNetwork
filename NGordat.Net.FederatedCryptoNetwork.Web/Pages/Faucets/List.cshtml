@@ -28,14 +28,15 @@
                 </div>
             </div>
             <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-                <img src="~/images/faucets/faucet.png" class="img-fluid animated" alt="">
+                <img src="~/images/faucets/faucet.png" class="img-fluid animated" width="500px">
             </div>
         </div>
     </div>
 }
 
-<partial name="_FaucetBox" model="model" />
-<partial name="_FaucetBox" model="model" />
-<partial name="_FaucetBox" model="model" />
-<partial name="_FaucetBox" model="model" />
+@foreach (var faucet in Model.Items)
+{
+    <partial name="_FaucetBox" model="faucet" />
+}
+
 <partial name="_FaucetBox" model="model" />
