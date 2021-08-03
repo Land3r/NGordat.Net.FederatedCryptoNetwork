@@ -7,6 +7,7 @@ namespace NGordat.Net.FederatedCryptoNetwork.Web.ViewModels.Faucets
 {
   public class FaucetViewModel
   {
+    public int Id { get; set; }
     public int? Ranking { get; set; }
 
     public bool? Recommended { get; set; }

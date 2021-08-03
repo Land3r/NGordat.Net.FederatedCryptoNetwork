@@ -25,6 +25,7 @@ namespace NGordat.Net.FederatedCryptoNetwork.Web.Pages.Faucets
     {
       Items = _faucetService.GetAll().Select(faucet => new FaucetViewModel()
       {
+        Id = faucet.Id,
         Name = faucet.Name,
         DescriptionShort = faucet.DescriptionShort,
         DescriptionLong = faucet.DescriptionLong,

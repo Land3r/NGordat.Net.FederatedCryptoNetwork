@@ -42,7 +42,6 @@ namespace NGordat.Net.FederatedCryptoNetwork.Web.Pages.Admin
 
         public async Task<IActionResult> OnPostInitAsync(string initType)
         {
-
             if (initType == "Faucets")
             {
                 await _databaseService.CreateOrUpdateDataFolderAsync("Faucets", typeof(Faucet));

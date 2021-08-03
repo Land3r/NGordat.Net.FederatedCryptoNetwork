@@ -23,5 +23,10 @@ namespace NGordat.Net.FederatedCryptoNetwork.Services.Faucets
     {
       return _dbContext.Faucets.Where(item => item.Active == true).OrderBy(elm => elm.Ranking != null).ThenBy(elm => elm.Ranking);
     }
+
+    public Faucet GetById(int faucetId)
+    {
+      return _dbContext.Faucets.FirstOrDefault(item => item.Active == true && item.Id == faucetId);
+    }
   }
 }

@@ -1,30 +1,80 @@
-﻿@page "{name:string}"
+﻿@page "{faucetName}/{faucetId}"
 @model NGordat.Net.FederatedCryptoNetwork.Web.Pages.Faucets.DetailsModel
 
 @{
+    Layout = "_Layout";
     ViewBag.PageTitle = "Faucets - " + Model.Faucet.Name;
+    string recommendedClass = Model.Faucet.Recommended.HasValue && Model.Faucet.Recommended == true ? "border border-warning" : "";
 }
 
-@section Hero {
-    <div class="container bg-theme-light p-4 rounded border border-warning">
-        <div class="row justify-content-between">
-            <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
-                <div data-aos="zoom-out">
-                    <h1>Earn money with our selection of currated <span>Faucets</span></h1>
-                    <h2>Just fill in super easy tasks and get paid for it. You just need to have some free time to earn <span>crypto</span></h2>
-                    <div class="text-center text-lg-start">
-                        <a href="#about" class="btn-get-started scrollto">Get Started</a>
-                    </div>
-                </div>
+<div class="d-flex align-items-center p-3 text-white-50 bg-purple rounded box-shadow" style="margin-top: 74px;">
+    <img class="mr-3" src="/images/faucets/faucetcrypto.jpg" alt="FaucetCrypto" width="64" height="64">
+    <div class="lh-100 mr-auto">
+        <h6 class="mb-0 text-white lh-100"><i class="fas fa-faucet"></i> Faucet &gt; FaucetCrypto</h6>
+        <div>
+            <span class="fa fa-star star-checked"></span>
+            <span class="fa fa-star star-checked"></span>
+            <span class="fa fa-star star-checked"></span>
+            <span class="fa fa-star star-unchecked"></span>
+            <span class="fa fa-star star-unchecked"></span>
+        </div>
+        <small>Since 2017</small>
+    </div>
+    <div class="badge-pill badge-success">10 min / j</div>
+</div>
+
+<div class="my-3 p-2 bg-white rounded box-shadow flex-column @recommendedClass">
+    <div class="d-flex flex-row justify-content-between">
+        <div>
+            <h6 class="border-bottom border-gray pb-2 mb-1">
+                <span class="badge badge-warning mr-1 p-1" style="font-size:larger">#@Model.Faucet.Ranking</span>
+                <span style="font-size:1.25rem;">@Model.Faucet.Name</span> - <a href="@Model.Faucet.AffiliateUrl" target="_blank">@Model.Faucet.PublicUrl</a>
+                <span class="badge badge-success p-1" data-toggle="tooltip" data-placement="top" title="Last reported 2 days ago.">Status*: <strong>Legit</strong></span>
+            </h6>
+        </div>
+        <div>
+            <a href="out"><i class="fas fa-info-circle"></i> Info</a>
+        </div>
+    </div>
+
+    <div class="d-flex flex-row justify-content-between">
+        <div style="text-align:center">
+            <img src="@Model.Faucet.Icon" height="64" />
+            <div>
+                <span class="fa fa-star star-checked"></span>
+                <span class="fa fa-star star-checked"></span>
+                <span class="fa fa-star star-checked"></span>
+                <span class="fa fa-star star-unchecked"></span>
+                <span class="fa fa-star star-unchecked"></span>
             </div>
-            <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-                <img src="~/images/faucets/faucet.png" class="img-fluid animated" width="500px">
+            <small>Since 2017</small>
+            <div>
+                <a href="out"><i class="fas fa-info-circle"></i> Info</a>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li>Timer</li>
+                <li>PTC Ads / Shortlinks</li>
+                <li>Challenges</li>
+                <li>Withdraw direct to wallet</li>
+                <li>
+                    @if (Model.Faucet.Ranking != null && Model.Faucet.Ranking <= 3)
+                    {
+                        <span class="badge badge-warning mr-1 p-1">#@Model.Faucet.Ranking</span>
+                    }
+                    @if (Model.Faucet.Recommended.HasValue && Model.Faucet.Recommended == true)
+                    {
+                        <span class="badge badge-success mr-1 p-1">RECOMMENDED</span>
+                    }
+                </li>
+            </ul>
+        </div>
+        <div class="lh-100">
+            <a target="_blank" href="@Model.Faucet.AffiliateUrl"><img src="@Model.Faucet.Banner" width="728" height="90" /></a>
+            <div class="text-muted pt-3">
+                @Model.Faucet.DescriptionShort
             </div>
         </div>
     </div>
-}
-
-@foreach (var faucet in Model.Items)
-{
-    <partial name="_FaucetBox" model="faucet" />
-}
+</div>

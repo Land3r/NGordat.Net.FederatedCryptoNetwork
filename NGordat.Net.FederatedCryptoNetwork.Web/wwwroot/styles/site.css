@@ -103,18 +103,18 @@ body {
     font-size: 24px;
 }
 
-    #hero .btn-get-started {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        letter-spacing: 1px;
-        display: inline-block;
-        padding: 10px 30px;
-        border-radius: 50px;
-        transition: 0.5s;
-        color: #fff;
-        background: #FF652F;
-    }
+#hero .btn-get-started {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.5s;
+    color: #fff;
+    background: #FF652F;
+}
 
 #hero .btn-get-started:hover {
     background: #17b57d;
@@ -252,7 +252,7 @@ body {
 
 .hero-waves {
     display: block;
-    margin-top: 60px;
+    margin-top: 10px;
     width: 100%;
     height: 60px;
     z-index: 5;
@@ -338,4 +338,13 @@ body {
     100% {
         transform: translate(85px, 0%);
     }
+}
+
+.sticky-footer {
+    position:sticky;
+    top:100%;
+}
+
+#faded {
+    min-height: 50vh;
 }
