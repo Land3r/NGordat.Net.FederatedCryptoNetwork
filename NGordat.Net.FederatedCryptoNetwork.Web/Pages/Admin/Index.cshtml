@@ -9,7 +9,14 @@
         {
             <p class="alert alert-success">@Model.SuccessMessage</p>
         }
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <p class="alert alert-danger">@Model.ErrorMessage</p>
+        }
         <h5>Database</h5>
         <button type="submit" name="EnsureCreated" class="btn btn-warning" asp-page-handler="EnsureCreated">EnsureCreated</button>
+        <hr />
+        <h5>Data</h5>
+        <button type="submit" name="InitFaucet" class="btn btn-warning" asp-page-handler="Init" asp-route-initType="Faucets">Create or update <strong>Faucets</strong></button>
     </form>
 </div>

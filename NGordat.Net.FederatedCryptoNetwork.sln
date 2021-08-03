@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NGordat.Net.FederatedCryptoNetwork.Web", "NGordat.Net.FederatedCryptoNetwork.Web\NGordat.Net.FederatedCryptoNetwork.Web.csproj", "{51D9CCC8-1203-4B6E-93C4-A57A5F3C9481}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGordat.Net.FederatedCryptoNetwork.Dal", "NGordat.Net.FederatedCryptoNetwork.Dal\NGordat.Net.FederatedCryptoNetwork.Dal.csproj", "{63F66786-AF52-48E7-B23C-42A5E991032F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NGordat.Net.FederatedCryptoNetwork.Dal", "NGordat.Net.FederatedCryptoNetwork.Dal\NGordat.Net.FederatedCryptoNetwork.Dal.csproj", "{63F66786-AF52-48E7-B23C-42A5E991032F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGordat.Net.FederatedCryptoNetwork.Domain", "NGordat.Net.FederatedCryptoNetwork.Domain\NGordat.Net.FederatedCryptoNetwork.Domain.csproj", "{90A1EA28-47BE-4AE6-AB95-95E483B5F4BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NGordat.Net.FederatedCryptoNetwork.Domain", "NGordat.Net.FederatedCryptoNetwork.Domain\NGordat.Net.FederatedCryptoNetwork.Domain.csproj", "{90A1EA28-47BE-4AE6-AB95-95E483B5F4BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGordat.Net.FederatedCryptoNetwork.Services", "NGordat.Net.FederatedCryptoNetwork.Services\NGordat.Net.FederatedCryptoNetwork.Services.csproj", "{68443C52-1C2B-49FF-8BDA-1BFBDF31A336}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NGordat.Net.FederatedCryptoNetwork.Services", "NGordat.Net.FederatedCryptoNetwork.Services\NGordat.Net.FederatedCryptoNetwork.Services.csproj", "{68443C52-1C2B-49FF-8BDA-1BFBDF31A336}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

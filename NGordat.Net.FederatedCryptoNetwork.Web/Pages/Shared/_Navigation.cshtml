@@ -1,0 +1,52 @@
+﻿@using NGordat.Net.FederatedCryptoNetwork.Web.Extensions
+
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" style="padding:.25rem 1rem">
+    <a class="navbar-brand" href="#">
+        <img src="~/images/icons/loicc_1.png" height="48" />
+        <span class="logo" data-toggle="\əˈnɒn\ Low Orbital Ion Crypto Canon \əˈnɒn\"><span class="off">Loi</span><span class="on">C</span><span class="off">c</span></span>
+    </a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a asp-page="/Faucets/List" class="nav-link">Faucets <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a asp-page="/Airdrops/List" class="nav-link">Airdrops</a>
+            </li>
+            <li class="nav-item">
+                <a asp-page="/Exchanges/List" class="nav-link">Exchanges</a>
+            </li>
+            <li class="nav-item">
+                <a asp-page="/Games/List" class="nav-link">Games</a>
+            </li>
+            <li class="nav-item">
+                <a asp-page="/MicroWallets/List" class="nav-link">MicroWallets</a>
+            </li>
+            <li class="nav-item">
+                <a asp-page="/Mining/Index" class="nav-link">Mining</a>
+            </li>
+            <li class="nav-item">
+                <a asp-page="/Airdrops/List" class="nav-link">Switch account</a>
+            </li>
+            @*<li class="@Html.IsSelected(controller: "Home", action: "Index")">
+                <a href="@Url.Action("Index", "Home", new {area = ""})" data-toggle="tooltip" data-placement="right" data-delay='{"show":"300", "hide":"10"}' title="@DELSSI.Web.Ressources.Views.Resource.Accueil" id="ToolTipNav1"><i class="fa fa-home"></i> <span class="nav-label">@DELSSI.Web.Ressources.Views.Resource.Accueil</span></a>
+            </li>*@
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>

@@ -1,7 +1,8 @@
-﻿@page
-@model NGordat.Net.FederatedCryptoNetwork.Web.Pages.Faucets.ListModel
+﻿@page "{name:string}"
+@model NGordat.Net.FederatedCryptoNetwork.Web.Pages.Faucets.DetailsModel
+
 @{
-    ViewBag.PageTitle = "Faucets";
+    ViewBag.PageTitle = "Faucets - " + Model.Faucet.Name;
 }
 
 @section Hero {
