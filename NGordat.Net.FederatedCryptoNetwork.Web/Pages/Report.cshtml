@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Report.Category" class="form-label">Category</label>
-                <select asp-for="Report.Category" asp-items="NGordat.Net.FederatedCryptoNetwork.Web.ViewModels.Faucets.FaucetCategory.GetListItems()" class="form-control chosen"></select>
+                <select asp-for="Report.Category" asp-items="NGordat.Net.FederatedCryptoNetwork.Web.ViewModels.Faucets.FaucetCategory.GetListItems()" class="form-control chosen add-option-empty" data-placeholder="Choose a category"></select>
                 <span asp-validation-for="Report.Category"></span>
             </div>
             <div class="form-group">
@@ -51,7 +51,4 @@
 </div>
 
 @section Scripts {
-    <script type="text/javascript">
-        $('.chosen').chosen({ allow_single_deselect: true, no_results_text: "Aucun résultat.", placeholder_text_single: " ", width: '100%' });
-    </script>
 } 

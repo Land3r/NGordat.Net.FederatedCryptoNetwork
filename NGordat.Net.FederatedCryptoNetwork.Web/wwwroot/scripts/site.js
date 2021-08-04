@@ -1,4 +1,35 @@
-﻿jQuery(document).ready(function () {
+﻿function enableFramework(elm) {
+    elm.find('.add-option-empty').each(function () {
+        let selectElm = jQuery(this);
+        selectElm.prepend(new Option("", ""));
+
+        if (selectElm.hasClass('chosen')) {
+            elm.trigger('chosen:update');
+        }
+    });
+}
+
+function enableChosen(elm) {
+    let noResultsText = elm.data('no-results-text') ?? 'No results';
+    let placeholderTextSingle = elm.data('placeholder-text-single') ?? '';
+    let allowSingleDeselect = elm.data('allow-single-deselect') ?? true;
+
+    elm.chosen({
+        allow_single_deselect: allowSingleDeselect,
+        no_results_text: noResultsText,
+        placeholder_text_single: placeholderTextSingle
+    });
+}
+
+jQuery(document).ready(function () {
+
+    let body = jQuery('body');
+
+    enableFramework(body);
+
+    body.find('.chosen').each(function () {
+        enableChosen(jQuery(this));
+    });
 
     particlesJS("particles-js", {
         "particles": {
