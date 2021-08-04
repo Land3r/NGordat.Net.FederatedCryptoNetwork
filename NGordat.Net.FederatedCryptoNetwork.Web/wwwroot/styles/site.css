@@ -33,9 +33,55 @@
 .bg-theme-dark {
     background-color: #272727;
 }
+.theme-dark {
+    color: #272727;
+}
 
 .bg-theme-light {
     background-color: #747474;
+}
+.theme-light {
+    color: #747474;
+}
+
+.bg-theme-orange {
+    background-color: #FF652F;
+}
+.theme-orange {
+    color: #FF652F;
+}
+.box-shadow-xl-theme-orange {
+    box-shadow: 0 0.4rem 2.0rem rgba(255, 101, 47, 0.8);
+}
+
+.bg-theme-yellow {
+    background-color: #FFE400;
+}
+.theme-yellow {
+    color: #FFE400;
+}
+.box-shadow-xl-theme-yellow {
+    box-shadow: 0 0.4rem 2.0rem rgba(255, 228, 0, 0.8);
+}
+
+.bg-theme-green {
+    background-color: #14A76C
+}
+.theme-green {
+    color: #14A76C;
+}
+.box-shadow-xl-theme-green {
+    box-shadow: 0 0.4rem 2.0rem rgba(20, 167, 108, 0.8);
+}
+
+.bg-theme-pink {
+    background-color: #D83F87;
+}
+.theme-pink {
+    color: #D83F87;
+}
+.box-shadow-xl-theme-pink {
+    box-shadow: 0 0.4rem 2.0rem rgba(216, 63, 135, 0.8);
 }
 
 .star-checked {

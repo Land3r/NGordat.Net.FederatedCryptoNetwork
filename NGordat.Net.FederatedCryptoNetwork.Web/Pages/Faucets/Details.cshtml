@@ -5,9 +5,10 @@
     Layout = "_Layout";
     ViewBag.PageTitle = "Faucets - " + Model.Faucet.Name;
     string recommendedClass = Model.Faucet.Recommended.HasValue && Model.Faucet.Recommended == true ? "border border-warning" : "";
+    string detailType = "Faucets";
 }
 
-<div class="d-flex align-items-center p-3 text-white-50 bg-purple rounded box-shadow" style="margin-top: 74px;">
+<div class="d-flex align-items-center p-3 text-white-50 bg-theme-orange rounded box-shadow" style="margin-top: 74px;">
     <img class="mr-3" src="/images/faucets/faucetcrypto.jpg" alt="FaucetCrypto" width="64" height="64">
     <div class="lh-100 mr-auto">
         <h6 class="mb-0 text-white lh-100"><i class="fas fa-faucet"></i> Faucet &gt; FaucetCrypto</h6>
@@ -23,17 +24,17 @@
     <div class="badge-pill badge-success">10 min / j</div>
 </div>
 
-<div class="my-3 p-2 bg-white rounded box-shadow flex-column @recommendedClass">
+<div class="my-3 p-2 bg-white rounded box-shadow-xl-theme-orange flex-column @recommendedClass">
     <div class="d-flex flex-row justify-content-between">
         <div>
             <h6 class="border-bottom border-gray pb-2 mb-1">
-                <span class="badge badge-warning mr-1 p-1" style="font-size:larger">#@Model.Faucet.Ranking</span>
+                <span class="badge badge-warning mr-1 p-1" style="font-size:larger">#@Model.Faucet.Ranking in <a asp-page="List">@detailType</a></span>
                 <span style="font-size:1.25rem;">@Model.Faucet.Name</span> - <a href="@Model.Faucet.AffiliateUrl" target="_blank">@Model.Faucet.PublicUrl</a>
                 <span class="badge badge-success p-1" data-toggle="tooltip" data-placement="top" title="Last reported 2 days ago.">Status*: <strong>Legit</strong></span>
             </h6>
         </div>
         <div>
-            <a href="out"><i class="fas fa-info-circle"></i> Info</a>
+            <a asp-page="../Report"><i class="fas fa-exclamation-triangle"></i> Report an issue</a>
         </div>
     </div>
 
@@ -78,3 +79,17 @@
         </div>
     </div>
 </div>
+
+<div class="my-3 pb-2 bg-white rounded box-shadow-xl-theme-orange">
+    <div class="d-flex flex-row justify-content-between">
+        <div>
+            <h6 class="border-bottom border-gray pb-2 mb-1">
+                <span class="badge badge-warning mr-1 p-1" style="font-size:larger">#@Model.Faucet.Ranking in </span>
+                <span style="font-size:1.25rem;">@Model.Faucet.Name</span> - <a href="@Model.Faucet.AffiliateUrl" target="_blank">@Model.Faucet.PublicUrl</a>
+                <span class="badge badge-success p-1" data-toggle="tooltip" data-placement="top" title="Last reported 2 days ago.">Status*: <strong>Legit</strong></span>
+            </h6>
+        </div>
+        <div>
+            <a href="out"><i class="fas fa-info-circle"></i> Info</a>
+        </div>
+    </div></div>
