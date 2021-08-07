@@ -1,4 +1,5 @@
 ﻿@using NGordat.Net.FederatedCryptoNetwork.Web.Extensions
+@inject IStringLocalizer<ApplicationResources> _localizer
 
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark" style="padding:.25rem 1rem">
     <a class="navbar-brand" href="#">
@@ -12,29 +13,39 @@
     <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a asp-page="/Faucets/List" class="nav-link">Faucets <span class="sr-only">(current)</span></a>
+                <a asp-page="/Faucets/List" class="nav-link">@_localizer.GetString("Navigation.Faucets")<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a asp-page="/Airdrops/List" class="nav-link">Airdrops</a>
+                <a asp-page="/Airdrops/List" class="nav-link">
+                    @_localizer.GetString("Navigation.Airdrops")
+                </a>
             </li>
             <li class="nav-item">
-                <a asp-page="/Exchanges/List" class="nav-link">Exchanges</a>
+                <a asp-page="/Exchanges/List" class="nav-link">
+                    @_localizer.GetString("Navigation.Exchanges")
+                </a>
             </li>
             <li class="nav-item">
-                <a asp-page="/Games/List" class="nav-link">Games</a>
+                <a asp-page="/Games/List" class="nav-link">
+                    @_localizer.GetString("Navigation.Games")
+                </a>
             </li>
             <li class="nav-item">
-                <a asp-page="/MicroWallets/List" class="nav-link">MicroWallets</a>
+                <a asp-page="/MicroWallets/List" class="nav-link">
+                    @_localizer.GetString("Navigation.MicroWallets")
+                </a>
             </li>
             <li class="nav-item">
-                <a asp-page="/Mining/Index" class="nav-link">Mining</a>
+                <a asp-page="/Mining/List" class="nav-link">
+                    @_localizer.GetString("Navigation.Mining")
+                </a>
             </li>
             <li class="nav-item">
-                <a asp-page="/Airdrops/List" class="nav-link">Switch account</a>
+            <a asp-page="/Airdrops/List" class="nav-link">Switch account</a>
             </li>
-            @*<li class="@Html.IsSelected(controller: "Home", action: "Index")">
-                <a href="@Url.Action("Index", "Home", new {area = ""})" data-toggle="tooltip" data-placement="right" data-delay='{"show":"300", "hide":"10"}' title="@DELSSI.Web.Ressources.Views.Resource.Accueil" id="ToolTipNav1"><i class="fa fa-home"></i> <span class="nav-label">@DELSSI.Web.Ressources.Views.Resource.Accueil</span></a>
-            </li>*@
+                @*<li class="@Html.IsSelected(controller: "Home", action: "Index")">
+        <a href="@Url.Action("Index", "Home", new {area = ""})" data-toggle="tooltip" data-placement="right" data-delay='{"show":"300", "hide":"10"}' title="@DELSSI.Web.Ressources.Views.Resource.Accueil" id="ToolTipNav1"><i class="fa fa-home"></i> <span class="nav-label">@DELSSI.Web.Ressources.Views.Resource.Accueil</span></a>
+    </li>*@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">

@@ -45,12 +45,20 @@ namespace NGordat.Net.FederatedCryptoNetwork.Web
     {
       services.Configure<FederatedCryptoNetworkConfigurationSection>(Configuration.GetSection(FederatedCryptoNetworkConfigurationSection.SectionName));
 
+      // Localisation
+      services.AddLocalization(options =>
+      {
+        options.ResourcesPath = "Resources";
+      });
 
       var razor = services.AddRazorPages();
       if (Environment.IsDevelopment())
       {
         razor.AddRazorRuntimeCompilation();
       }
+
+      razor.AddMvcLocalization()
+        .AddDataAnnotationsLocalization();
 
       DalConfigurationExtensions.Configure(services);
       ServicesConfigurationExtensions.Configure(services);

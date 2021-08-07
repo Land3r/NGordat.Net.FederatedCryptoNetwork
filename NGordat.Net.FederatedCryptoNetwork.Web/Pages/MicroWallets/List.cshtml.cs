@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace NGordat.Net.FederatedCryptoNetwork.Web.Pages.MicroWallet
+namespace NGordat.Net.FederatedCryptoNetwork.Web.Pages.MicroWallets
 {
-    public class DetailsModel : PageModel
+    public class ListModel : PageModel
     {
         public void OnGet()
         {

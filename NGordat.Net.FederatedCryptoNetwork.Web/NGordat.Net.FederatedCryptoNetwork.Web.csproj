@@ -27,6 +27,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Resources\Pages\Admin\" />
+    <Folder Include="Resources\Pages\Airdrops\" />
+    <Folder Include="Resources\Pages\Faucets\" />
+    <Folder Include="Resources\Pages\Exchanges\" />
+    <Folder Include="Resources\Pages\Games\" />
+    <Folder Include="Resources\Pages\MicroWallet\" />
+    <Folder Include="Resources\Pages\Mining\" />
     <Folder Include="wwwroot\images\icons\" />
   </ItemGroup>
 
