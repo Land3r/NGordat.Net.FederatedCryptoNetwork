@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyVersion>1.0.0.218</AssemblyVersion>
-    <FileVersion>1.0.0.218</FileVersion>
+    <AssemblyVersion>1.0.0.221</AssemblyVersion>
+    <FileVersion>1.0.0.221</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -39,6 +39,27 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NGordat.Net.FederatedCryptoNetwork.Services\NGordat.Net.FederatedCryptoNetwork.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ApplicationResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ApplicationResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ApplicationResources.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ApplicationResources.fr-FR.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ApplicationResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
