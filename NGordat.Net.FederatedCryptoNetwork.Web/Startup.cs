@@ -56,6 +56,7 @@ namespace NGordat.Net.FederatedCryptoNetwork.Web
             {
                 razor.AddRazorRuntimeCompilation();
             }
+            services.
 
             razor.AddMvcLocalization()
               .AddDataAnnotationsLocalization()
