@@ -6,6 +6,30 @@
     ViewBag.PageTitle = "Faucets - " + Model.Faucet.Name;
     string recommendedClass = Model.Faucet.Recommended.HasValue && Model.Faucet.Recommended == true ? "border border-warning" : "";
     string detailType = "Faucets";
+
+    ViewBag.AvailableCoins = new List<string>()
+{
+      "btc",
+      "eth",
+      "bch",
+      "bsv",
+      "etc",
+      "ltc",
+      "dash",
+      "zec",
+      "doge",
+      "dgb",
+      "rvn",
+      "trx",
+      "btt",
+      "kmd",
+      "sys",
+      "xvg",
+      "zen",
+      "rdd",
+      "pivx",
+      "pirate"
+  };
 }
 
 <div class="d-flex align-items-center p-3 text-white-50 bg-theme-orange rounded box-shadow" style="margin-top: 74px;">
@@ -36,19 +60,86 @@
         <div>
             <a asp-page="../Out/"><i class="fas fa-external-link-alt"></i> Go to @Model.Faucet.Name</a>
         </div>
-        <div>
-            <a asp-page="../Report"><i class="fas fa-exclamation-triangle"></i> Report an issue</a>
-        </div>
-    </div>
-
-    <p class="mb-1">Qu'est ce qu'un faucet ?</p>
-    <div class="text-muted pt-3">
-        <p>Un faucet ("robinet", en français) est un site Internet ou une application mobile qui récompense ses visiteurs ou ses utilisateurs en les "rémunérant", c'est-à-dire en leur versant des tokens ou des satochis (la plus petite unité utilisée dans le protocole bitcoin), en contrepartie du temps passé et des actions réalisées. L'internaute qui souhaite ainsi gagner de petites fractions de bitcoins et d'altcoins (car il existe des faucets tout autant pour le bitcoin que pour des cryptomonnaies alternatives) devra au préalable effectuer des micro tâches, consistant par exemple à remplir un captcha, fournir une adresse e-mail, répondre à un quizz, regarder des publicités en ligne, participer à un sondage ou bien encore éliminer des créatures ou des personnages dans un jeu en ligne.</p>
     </div>
     <p class="mb-1">Pourquoi FaucetCrypto ?</p>
     <div class="d-flex flex-row">
         <div class="text-muted pt-3">
-            <p><a href="TODO">FaucetCrypto</a> est un faucet complet qui permet de gagner assez rapidement jusqu'à 1€/jour.</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            FaucetCrypto
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Rating
+                        </td>
+                        <td>
+                            4 stars
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Earning
+                        </td>
+                        <td>
+                            Best
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Language
+                        </td>
+                        <td>
+                            English
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Features
+                        </td>
+                        <td>
+                            <ul>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                                <li>1</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Withdraw</td>
+                        <td>Direct | <img src="~/images/microwallets/faucetpay.png" height="25" /> | <img src="~/images/microwallets/expresscrypto.png" height="25" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Running since
+                        </td>
+                        <td>
+                            2017
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Last checked
+                        </td>
+                        <td>
+                            2 days ago
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
         </div>
         <div>
             <iframe id="ytplayer"
@@ -57,23 +148,28 @@
                     height="360"
                     src="https://www.youtube.com/embed/Tb5aK9dA5Kg"
                     frameborder="0"></iframe>
+            <p>Available cryptos</p>
+            <div class="d-flex flex-row flex-wrap align-content-start crypto-list">
+                @foreach (string coin in ViewBag.AvailableCoins)
+                {
+                    <partial name="_Coin" model="coin" />
+                }
+            </div>
         </div>
     </div>
-
-
+    <p class="mb-1" data-toggle="collapse" data-target="#whatIsFaucet" aria-expanded="false" aria-controls="whatIsFaucet">
+        What is a faucet ? <i class="fas fa-chevron-up"></i>
+    </p>
+    <div class="collapse" id="whatIsFaucet">
+        <div class="card card-body text-muted pt-3">
+            Un faucet ("robinet", en français) est un site Internet ou une application mobile qui récompense ses visiteurs ou ses utilisateurs en les "rémunérant", c'est-à-dire en leur versant des tokens ou des satochis (la plus petite unité utilisée dans le protocole bitcoin), en contrepartie du temps passé et des actions réalisées. L'internaute qui souhaite ainsi gagner de petites fractions de bitcoins et d'altcoins (car il existe des faucets tout autant pour le bitcoin que pour des cryptomonnaies alternatives) devra au préalable effectuer des micro tâches, consistant par exemple à remplir un captcha, fournir une adresse e-mail, répondre à un quizz, regarder des publicités en ligne, participer à un sondage ou bien encore éliminer des créatures ou des personnages dans un jeu en ligne.
+        </div>
+    </div>
     <div class="d-flex flex-row justify-content-between">
         <div style="text-align:center">
             <img src="@Model.Faucet.Icon" height="64" />
             <div>
-                <span class="fa fa-star star-checked"></span>
-                <span class="fa fa-star star-checked"></span>
-                <span class="fa fa-star star-checked"></span>
-                <span class="fa fa-star star-unchecked"></span>
-                <span class="fa fa-star star-unchecked"></span>
-            </div>
-            <small>Since 2017</small>
-            <div>
-                <a href="out"><i class="fas fa-info-circle"></i> Info</a>
+                <a asp-page="../Report"><i class="fas fa-exclamation-triangle"></i> Report an issue</a>
             </div>
         </div>
         <div>
